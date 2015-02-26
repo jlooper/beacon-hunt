@@ -1,0 +1,38 @@
+{
+  "ProjectName": "Hunt Require",
+  "ProjectGuid": "92e29eeb-6b35-4951-9322-1c01604bc356",
+  "projectVersion": 1,
+  "AppIdentifier": "com.telerik.HuntRequire",
+  "DisplayName": "Hunt Require",
+  "Author": "",
+  "Description": "",
+  "BundleVersion": "1.0",
+  "AndroidVersionCode": "1",
+  "iOSDeviceFamily": [
+    "1",
+    "2"
+  ],
+  "iOSBackgroundMode": [],
+  "ProjectTypeGuids": "{070BCB52-5A75-4F8C-A973-144AF0EAFCC9}",
+  "FrameworkVersion": "3.5.0",
+  "AndroidPermissions": [],
+  "DeviceOrientations": [
+    "Portrait",
+    "Landscape"
+  ],
+  "AndroidHardwareAcceleration": "false",
+  "iOSStatusBarStyle": "Default",
+  "Framework": "Cordova",
+  "WP8TileTitle": "",
+  "WP8Publisher": "",
+  "WP8Capabilities": [],
+  "WP8Requirements": [],
+  "WP8PublisherID": "{1996ae65-d5a3-488f-8b0e-af6b4bbba851}",
+  "WP8ProductID": "{8457f205-cb88-46eb-92f6-80e42f2bb459}",
+  "WPSdk": "8.0",
+  "WP8SupportedResolutions": [
+    "ID_RESOLUTION_WVGA",
+    "ID_RESOLUTION_WXGA",
+    "ID_RESOLUTION_HD720P"
+  ]
+}
