@@ -1,0 +1,80 @@
+<div data-role="view" id="Host" data-title="Host a Hunt" data-model="app.Host.model" data-show="app.Host.events.dataShow">
+    
+<header data-role="header">   
+    <div data-role="navbar">
+        <span data-role="view-title"></span>
+        <a class="colored" data-role="button" href="#Invite" data-align="left">
+            <span class="icon mail"></span>
+        </a>
+    </div>
+</header>   
+    
+   <div class="console"></div>
+ 
+
+       <div class="card rounded">
+           
+           
+           
+           <p>
+               Create a 6-digit PIN for use by the invitees to this hunt. This allows your invitees to participate in this hunt.
+           </p>
+           
+           <p>
+               My hunt's current PIN is: <span data-bind="text: huntPIN"></span>
+           </p>
+           
+           <form>
+               <ul data-role="listview" data-style="inset">
+                <li class="pin">
+                    <label>
+                       Create a PIN:
+                    <input type="text" name="huntPIN" data-bind="value: huntPIN" required  />
+                    </label>
+                </li>
+               </ul>
+               <button class="btn colored" style="width: 100%;margin:0 auto" data-role="button" data-bind="click: createHunt">Create</button>
+           </form>
+           
+
+      </div>
+
+<footer data-role="footer">
+        <div data-role="tabstrip">
+                <a href="#Host"><div class="icon settings"></div>Host a Hunt</a>   
+                <a href="#Attend"><div class="icon target"></div>Attend a Hunt</a>           
+        </div>
+</footer> 
+   
+
+
+</div>
+
+<div data-role="view" id="Invite" data-title="Invite Some Guests" data-model="app.Host.model">
+    
+<header data-role="header">   
+    <div data-role="navbar">
+        <span data-role="view-title"></span>
+    </div>
+</header> 
+    
+    <div class="console"></div>
+
+    
+<div class="card rounded">
+    
+     <p>
+         Invite guests to participate in your hunt via email. When it's time to start the hunt, they will use the code that is provided in this email.
+     </p>
+    
+ <button class="btn colored" style="width: 100%;margin:0 auto" data-role="button" data-bind="click:invite">Invite Guests</button>
+    
+</div>
+
+<footer data-role="footer">
+            <div data-role="tabstrip">
+                <a href="#Host"><div class="icon settings"></div>Host a Hunt</a>   
+                <a href="#Attend"><div class="icon target"></div>Attend a Hunt</a>
+            </div>
+</footer> 
+</div>
