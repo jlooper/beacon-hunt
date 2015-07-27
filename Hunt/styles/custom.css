@@ -32,7 +32,10 @@ a .km-flat .km-state-active{
 	background-color:#4CAF50 !important;
     color:#FFF !important;
 }
-
+.blue{
+    background-color:#0288D1 !important;
+    color:#FFF !important;
+}
 
 /*custom overrides*/
 .km-view-title,.km-footer{
@@ -70,7 +73,7 @@ a .km-flat .km-state-active{
     margin:10px;
     padding:10px;
 }
-.km-phone .km-tabstrip .km-icon{
+.km-tabstrip .km-button .km-icon, .km-icon{
     display:none;
 }
 a.km-widget.km-button.km-state-active{
@@ -127,17 +130,28 @@ a.km-widget.km-button.km-state-active{
 }
 
 .target:before {
-	content: "\e600";
-	line-height:2em;
+	content: "\e04e";
+    line-height:2em;
 }
 .settings:before {
-	content: "\e603";
-	line-height:2em;
+	content: "\e02b";
+    line-height:2em;
 }
 .mail:before {
-    content: "\e601";
+    content: "\e028";
 }
-
+.hourglass:before{
+    content: "\e01f";
+}
+.trophy:before{
+    content: "\e023";
+}
+.chat:before{
+    content: "\e049";
+}
+.back:before{
+    content: "\e600";
+}
 /*end*/
 
 
@@ -154,7 +168,4 @@ a.km-widget.km-button.km-state-active{
 }
 
 
-.km-icon{
-	display:none !important;
-}
 

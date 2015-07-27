@@ -9,7 +9,7 @@
                 $("<div" + (isError ? " class='error'" : "") + "/>")
                     .css({
                         marginTop: -24,
-                        backgroundColor: isError ? "#ffbbbb" : "#72CBFF"
+                        backgroundColor: isError ? "#ffbbbb" : "#FFEF72"
                     })
                     .html(message)
                     .prependTo($(".console", container))
@@ -17,8 +17,14 @@
                         marginTop: 0
                     }, 300)
                     .animate({
-                        backgroundColor: isError ? "#ffdddd" : "#ffffff"
-                    }, 800);
+                        backgroundColor: isError ? "#FFEF72" : "#ffffff"
+                    }, 800)
+                	.animate({
+                        opacity: 0
+                    }, 1200)
+                	.animate({
+                        marginTop: -24
+                    }, 1200);
             } 
         },
 

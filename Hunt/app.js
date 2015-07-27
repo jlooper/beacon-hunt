@@ -1,10 +1,16 @@
 define([
   'views/Host/Host',
-  'views/Attend/Attend'
+  'views/Home/Home',
+  'views/Connected/Connected',
+  'views/Offline/Offline',
+  'views/MessageBoards/MessageBoards',
+  'views/Trophies/Trophies'
   
   
 ], function () {
 
+    
+    
   // create a global container object
   var app = window.app = window.app || {};
   
@@ -14,13 +20,40 @@ define([
         return formattedDate;
     };
     app.constants = {
-        NO_API_KEY_MESSAGE: '<h3>Backend Services <strong>API Key</strong> is not set.</h3><p><span>API Key</span> links the sample mobile app to a project in Telerik Backend Services.</p><p>To set the <span>API Key</span> open the <span>/scripts/config.js</span> file and replace <strong>$EVERLIVE_API_KEY$</strong> with the <span>API Key</span> of your Backend Services project.</p>',
-        EMULATOR_MODE: false
+        NO_API_KEY_MESSAGE: '<h3>Backend Services <strong>API Key</strong> is not set.</h3>',
+        EMULATOR_MODE: false,
+        EL: new Everlive({
+          apiKey: 'my-api-key',
+          offlineStorage: true,
+          url: '//api.everlive.com/v1/',
+          scheme: 'https'
+      })
     };
   
   var init = function () {
-
+           
     // intialize the application
+    if(!app.constants.EMULATOR_MODE){
+        StatusBar.overlaysWebView(false)
+    	StatusBar.backgroundColorByHexString('#000');
+    	StatusBar.styleLightContent();
+    }
+      
+     //Switch to online mode when the device connects to the network
+        document.addEventListener("online", function() {
+           	appConsole.clear();
+            appConsole.log("Your connection is now online");
+            app.constants.EL.online();   
+            app.constants.EL.sync();
+        });
+
+        //Switch to offline mode when the device looses network connectivity   
+        document.addEventListener("offline", function() {
+            appConsole.clear();
+            appConsole.log("Your connection is offline");            
+            app.constants.EL.offline();
+        });
+      
     app.instance = new kendo.mobile.Application(
 
       document.body, 

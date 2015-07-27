@@ -7,8 +7,7 @@ define([], function () {
 
       // append the template to the DOM
       this.html = $(template).appendTo(document.body);
-      localStorage.setItem('apiKey',"my-api-key");
-    
+      
      // expose the model and events off the global scope
       app[name] = { model: model || {}, events: events || {} };
     }

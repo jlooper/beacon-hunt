@@ -1,0 +1,62 @@
+<div data-role="view" id="Home" data-title="How do you want to hunt?" data-model="app.Home.model" data-show="app.Home.events.dataShow">
+    
+<header data-role="header">   
+    <div data-role="navbar">
+        <span data-role="view-title"></span>  
+    </div>
+</header>   
+<div class="console"></div>
+    
+    <div data-role="modalview" id="create-name" style="width:80%;height:60%;">   
+        <h1>
+            Welcome, beacon hunter! 
+        </h1>
+         
+        <p>
+            Please input a name or handle so we can set up your account!
+        </p>
+
+            <p class="msg"></p>
+        
+        <form>
+        
+            <p align="center">
+                
+            <input type="text" style="color:black;margin:5px" data-bind="value: name" id="name">
+           
+            <button class="btn colored" data-role="button" data-bind="click: createName">Submit</button>
+
+            </p>
+            
+
+        </form> 
+              
+    </div>
+
+	<div class="card rounded">            
+           <p>
+               <b>Offline mode</b>: Collect beacons as fast as you can, posting your results when you go back online. Great for hunting for beacons when offline.
+           </p>
+           <p align="center">
+              <a href="#Offline" class="btn blue" data-role="button">Offline Mode</a>
+           </p>
+    </div>
+    <div class="card rounded">
+            <p>
+                <b>Connected mode</b>: Register for a hunt and find a beacon. A push notification alerts your group who found the beacon first! Great for groups of people with reliable connectivity.
+           </p>
+           <p align="center">
+               <a class="btn blue" href="#Connected" data-role="button">Connected Mode</a>
+           </p>
+    </div>
+
+ <footer data-role="footer">
+            <div data-role="tabstrip">
+                <a href="#Host"><div class="icon settings"></div>Host a Hunt</a>   
+                <a href="#Home"><div class="icon target"></div>Attend a Hunt</a>
+            </div>
+</footer>
+
+</div>
+
+

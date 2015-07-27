@@ -1,0 +1,32 @@
+<div data-role="view" id="Trophies" data-title="Trophies" data-model="app.Trophies.model" data-init="app.Trophies.events.dataShow">
+    
+<header data-role="header">   
+    <div data-role="navbar">
+        <span data-role="view-title"></span> 
+        <a class="colored" data-role="button" href="#Home" data-align="left">
+            <span class="icon back"></span>
+        </a>
+    </div>
+</header>   
+	<div class="console"></div>
+    
+    <div class="card rounded">
+           <h1>
+               My Beacons
+           </h1>
+        	
+       	<ul id="trophies-list" data-style="inset" data-role="listview" data-template="trophies-template"></ul>
+	</div> 
+</div>
+
+<script id="trophies-template" type="text/x-kendo-template">
+    
+        <li>
+        # if (BeaconColor !=null) { #
+        	#: BeaconColor # beacon found in #: Time # minutes
+        # } #             
+        </li>
+
+    
+</script>
+

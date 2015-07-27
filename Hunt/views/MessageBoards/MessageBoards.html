@@ -1,0 +1,32 @@
+<div data-role="view" id="MessageBoards" data-title="Lost and Found" data-model="app.MessageBoards.model" data-show="app.MessageBoards.events.dataShow">
+    
+<header data-role="header">   
+    <div data-role="navbar">
+        <span data-role="view-title"></span> 
+        <a class="colored" data-role="button" href="#Home" data-align="left">
+            <span class="icon back"></span>
+        </a>
+    </div>
+</header>   
+	<div class="console"></div>
+    
+    <div class="card rounded">
+           <h1>
+               Beacons Found
+           </h1>
+        	
+       	<ul id="messages-list" data-style="inset" data-role="listview" data-template="messages-template"></ul>
+	</div> 
+</div>
+
+<script id="messages-template" type="text/x-kendo-template">
+    
+        <li>
+        # if (BeaconColor !=null && Name !=null && Time !=null) { #
+        	#: Name # found a(n) #: BeaconColor # beacon in #: Time # minutes
+        # } #             
+        </li>
+
+    
+</script>
+

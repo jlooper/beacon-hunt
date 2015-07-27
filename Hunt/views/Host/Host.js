@@ -5,19 +5,18 @@ define([
 
   var view, navbar, body, page;
    
-  var apiKey = localStorage.getItem("apiKey");
-          var el = new Everlive({
-          apiKey: apiKey,
-          url: '//api.everlive.com/v1/',
-          scheme: 'https'
-      });
     
   var model = kendo.observable({
     huntPIN: localStorage.getItem("huntPIN"),
       
    
     
-    createHunt: function(e){ 
+    createHunt: function(e){
+        
+        if(navigator.network.connection.type == Connection.NONE){
+                 appConsole.log("You appear to be offline. Your hunt is more easily created when you go online.")
+                 return
+         }
         
         appConsole.clear();
         
@@ -32,13 +31,14 @@ define([
             return
         }
         
-        //it must be unique
-        var data = el.data('Hunts');
-          var filter = { 
+            //it must be unique
+            var data = app.constants.EL.data('Hunts');
+          
+            var filter = { 
                 'huntPIN': this.huntPIN
             };
             
-            var data = el.data('Hunts');
+            var data = app.constants.EL.data('Hunts');
         
             var PIN = this.huntPIN
             
@@ -54,7 +54,7 @@ define([
                  else{
                      
                      
-                      var data = el.data('Hunts');
+                      var data = app.constants.EL.data('Hunts');
                          data.create({ 'huntPIN' : PIN },
                             function(data){
                              

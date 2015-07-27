@@ -1,0 +1,68 @@
+<div data-role="view" id="Offline" data-title="Offline" data-model="app.Offline.model" data-show="app.Offline.events.dataShow">
+    
+<header data-role="header">   
+    <div data-role="navbar">
+        <span data-role="view-title"></span>
+        <a class="colored" data-role="button" href="#Home" data-align="left">
+            <span class="icon back" data-bind="click: claimIce"></span>
+        </a>
+        <a class="colored" data-role="button" href="#MessageBoards" data-align="right">
+            <span class="icon chat"></span>
+        </a>
+        <a class="colored" data-role="button" href="#Trophies" data-align="right">
+            <span class="icon trophy"></span>
+        </a>
+    </div>
+</header> 
+    
+	<div class="console"></div>
+    
+    <div class="card rounded">
+           <h1>
+               Ready to hunt? Let's go!
+           </h1>
+               
+           	<p align="center">
+                <button class="btn colored" id="start" data-role="button" data-bind="click: start">Start Hunting!</button>
+        	</p>
+        	           
+	</div> 
+
+</div>
+
+<div data-role="view" id="Offline-Beacons" data-title="Find a Beacon!" data-model="app.Offline.model">
+
+<header data-role="header">   
+    <div data-role="navbar">
+        <span data-role="view-title"></span>
+        <a class="colored" data-role="button" href="#Home" data-align="left" data-bind="click: stop">
+            <span class="icon back"></span>
+        </a>
+    </div>
+</header> 
+    
+ <div class="console"></div>
+  
+	<div class="card rounded">           
+        	<h1 id="stopwatch" align="center">00:00</h1> 
+        <!-- for testing <a class="colored" data-role="button" href="#Home" data-align="left" data-bind="click: claimBeacon">
+            <span class="icon trophy"></span>-->
+        </a>
+	</div>
+    
+    <div class="card rounded">         
+        <div>
+            <button data-role="button" id="Ice-Offline" class="btn Ice" data-bind="click: claimIce" style="display:none;width:100%;margin-left:0px">I found the Ice Beacon!</button>
+            <button data-role="button" id="Blueberry-Offline" class="btn Blueberry" data-bind="click: claimBlueberry" style="display:none;width:100%;margin-left:0px">I found the Blueberry Beacon!</button>
+            <button data-role="button" id="Mint-Offline" class="btn Mint" data-bind="click: claimMint" style="display:none;width:100%;margin-left:0px">I found the Mint Beacon!</button>
+        </div>
+        
+        <div id="beaconlog-Offline" class="search">
+             Let's start searching for beacons!
+        </div>
+    
+   </div>     
+
+
+</div>
+
