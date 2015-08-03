@@ -71,6 +71,7 @@ define([
         document.getElementById('beaconlog-Offline').innerHTML = "Searching for beacons!";
         window.estimote.startRanging("Beacons");
         window.location.href = "#Offline-Beacons";
+            
        
 	  
       var $stopwatch, // Stopwatch element on the page
@@ -90,7 +91,8 @@ define([
             
               appConsole.log("Sorry, this hunt is taking too long, please try again!");
               model.resetTimer();
-              window.estimote.stopRanging();   
+              window.estimote.stopRanging();
+            
               window.location.href="#Home";
 
                 if (typeof(Timer) !== 'undefined') {

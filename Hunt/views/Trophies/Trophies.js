@@ -17,10 +17,7 @@ define([
 
 
 var events = {
-    init: function (e) {
-
-     
-     },
+    
      dataShow:function(e){
          
       var uuid = localStorage.getItem("UUID");

@@ -17,16 +17,8 @@ define([
 
 
 var events = {
-    init: function (e) {
-
-       
-        app.constants.EL.sync();
+    dataShow:function(e){
      
-     },
-     dataShow:function(e){
-         
-     
-      
       var data = app.constants.EL.data('BeaconsFound');
       
          var query = new Everlive.Query();

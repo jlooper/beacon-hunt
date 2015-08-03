@@ -207,15 +207,16 @@ define([
         $("#Mint").hide();
         document.getElementById('beaconlog').innerHTML = "Searching for beacons!";
         appConsole.clear();
-        window.estimote.startRanging("Beacons");       
+        window.estimote.startRanging("Beacons");
+
     },
 
     stop: function () {
         $("#Ice").hide();
         $("#Blueberry").hide();
         $("#Mint").hide();
-        appConsole.clear();    
-        window.estimote.stopRanging();           
+        appConsole.clear(); 
+        window.estimote.stopRanging();       
     },
     claimMint: function(){
         model.push("Mint");
