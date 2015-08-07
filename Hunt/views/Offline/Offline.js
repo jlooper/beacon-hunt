@@ -18,9 +18,6 @@ define([
           var name = localStorage.getItem('Name');
           var uuid = localStorage.getItem('UUID');
           
-          /*testing var color = "Test"
-          var time = 20*/
-          
           data.create({ 'Name': name, 'BeaconColor': color, 'UUID': uuid, 'Time': time },
               function(data){
                   	appConsole.log("Beacon logged!");
@@ -66,14 +63,12 @@ define([
    start:function(e){
        
       $("#Ice-Offline").hide();
-        $("#Blueberry-Offline").hide();
-        $("#Mint-Offline").hide();
-        document.getElementById('beaconlog-Offline').innerHTML = "Searching for beacons!";
-        window.estimote.startRanging("Beacons");
-        window.location.href = "#Offline-Beacons";
+      $("#Blueberry-Offline").hide();
+      $("#Mint-Offline").hide();
+      document.getElementById('beaconlog-Offline').innerHTML = "Searching for beacons!";
+      window.estimote.startRanging("Beacons");
+      window.location.href = "#Offline-Beacons";
             
-       
-	  
       var $stopwatch, // Stopwatch element on the page
       incrementTime = 1000, // Timer speed in milliseconds
       currentTime = 0, // Current time in hundredths of a second

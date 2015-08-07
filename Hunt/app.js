@@ -21,7 +21,7 @@ define([
     };
     app.constants = {
         NO_API_KEY_MESSAGE: '<h3>Backend Services <strong>API Key</strong> is not set.</h3>',
-        EMULATOR_MODE: false,
+        EMULATOR_MODE: true,
         EL: new Everlive({
           apiKey: 'my-api-key',
           offlineStorage: true,

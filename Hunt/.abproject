@@ -6,8 +6,8 @@
   "DisplayName": "Beacon Hunt",
   "Author": "Ladeez First Media",
   "Description": "Hunt for Estimote beacons",
-  "BundleVersion": "2.0",
-  "AndroidVersionCode": "1",
+  "BundleVersion": "2.1",
+  "AndroidVersionCode": "3",
   "iOSDeviceFamily": [
     "1",
     "2"
@@ -43,8 +43,8 @@
   "WP8PackageIdentityName": "1234Telerik.com.ladeezfirstmedia.hunt",
   "CorePlugins": [
     "com.estimote.sdk@1.1.0",
-    "com.phonegap.plugins.PushPlugin@2.5.1",
-    "nl.x-services.plugins.socialsharing@4.3.13",
+    "com.phonegap.plugins.PushPlugin@2.5.8",
+    "nl.x-services.plugins.socialsharing@4.3.17",
     "org.apache.cordova.battery-status",
     "org.apache.cordova.console",
     "org.apache.cordova.contacts",
